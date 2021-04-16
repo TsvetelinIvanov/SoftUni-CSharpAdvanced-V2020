@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>_05DirectoryTraversal</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="TestFolder\01. Writing-To-Files.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="TestFolder\bin\" />
+    <Folder Include="TestFolder\obj\" />
+    <Folder Include="TestFolder\Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TestFolder\App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFolder\backup.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFolder\controller.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFolder\log.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFolder\model.php">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFolder\script.asm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
