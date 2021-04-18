@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chainblock", "Chainblock\Chainblock.csproj", "{BE0469DC-DBE6-49FC-A8C0-760FA0A27595}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chainblock.Tests", "Chainblock.Tests\Chainblock.Tests.csproj", "{6C795B2F-DA2B-4809-9FE6-2540018530B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE0469DC-DBE6-49FC-A8C0-760FA0A27595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE0469DC-DBE6-49FC-A8C0-760FA0A27595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE0469DC-DBE6-49FC-A8C0-760FA0A27595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE0469DC-DBE6-49FC-A8C0-760FA0A27595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C795B2F-DA2B-4809-9FE6-2540018530B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C795B2F-DA2B-4809-9FE6-2540018530B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C795B2F-DA2B-4809-9FE6-2540018530B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C795B2F-DA2B-4809-9FE6-2540018530B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1234940A-CA33-41A5-B4AD-7450EBA5B774}
+	EndGlobalSection
+EndGlobal
