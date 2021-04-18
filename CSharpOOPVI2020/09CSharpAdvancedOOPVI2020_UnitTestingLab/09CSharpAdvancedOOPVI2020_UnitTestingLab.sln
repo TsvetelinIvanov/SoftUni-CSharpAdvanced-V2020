@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01TestAxe", "01TestAxe\01TestAxe.csproj", "{DC66B430-D8BE-43BC-8EF7-C76567E6E7B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01TestAxe.Tests", "01TestAxe.Tests\01TestAxe.Tests.csproj", "{FAECA54A-5A16-4B21-B37C-3B62D9D497F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02DummyTests", "02DummyTests\02DummyTests.csproj", "{0C0F1593-9A6F-437A-8C0E-6076DB313A3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03RefactorTests", "03RefactorTests\03RefactorTests.csproj", "{3F1430BC-36CB-422F-B73B-68304899D2BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04FakeAxeAndDummy", "04FakeAxeAndDummy\04FakeAxeAndDummy.csproj", "{4919BFA0-D6C1-47B1-AE3F-9F5B3B96A767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04FakeAxeAndDummyTests", "04FakeAxeAndDummyTests\04FakeAxeAndDummyTests.csproj", "{5E77A196-C908-43F5-A18A-5715E71A62FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05MockingTests", "05MockingTests\05MockingTests.csproj", "{E39FC026-D02F-4D7E-B18C-78D8B909AE1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC66B430-D8BE-43BC-8EF7-C76567E6E7B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC66B430-D8BE-43BC-8EF7-C76567E6E7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC66B430-D8BE-43BC-8EF7-C76567E6E7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC66B430-D8BE-43BC-8EF7-C76567E6E7B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAECA54A-5A16-4B21-B37C-3B62D9D497F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAECA54A-5A16-4B21-B37C-3B62D9D497F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAECA54A-5A16-4B21-B37C-3B62D9D497F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAECA54A-5A16-4B21-B37C-3B62D9D497F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C0F1593-9A6F-437A-8C0E-6076DB313A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C0F1593-9A6F-437A-8C0E-6076DB313A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C0F1593-9A6F-437A-8C0E-6076DB313A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C0F1593-9A6F-437A-8C0E-6076DB313A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F1430BC-36CB-422F-B73B-68304899D2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F1430BC-36CB-422F-B73B-68304899D2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F1430BC-36CB-422F-B73B-68304899D2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F1430BC-36CB-422F-B73B-68304899D2BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4919BFA0-D6C1-47B1-AE3F-9F5B3B96A767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4919BFA0-D6C1-47B1-AE3F-9F5B3B96A767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4919BFA0-D6C1-47B1-AE3F-9F5B3B96A767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4919BFA0-D6C1-47B1-AE3F-9F5B3B96A767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E77A196-C908-43F5-A18A-5715E71A62FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E77A196-C908-43F5-A18A-5715E71A62FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E77A196-C908-43F5-A18A-5715E71A62FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E77A196-C908-43F5-A18A-5715E71A62FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E39FC026-D02F-4D7E-B18C-78D8B909AE1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E39FC026-D02F-4D7E-B18C-78D8B909AE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E39FC026-D02F-4D7E-B18C-78D8B909AE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E39FC026-D02F-4D7E-B18C-78D8B909AE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73F11CD5-3E7E-4156-99F0-9E7118F32526}
+	EndGlobalSection
+EndGlobal
