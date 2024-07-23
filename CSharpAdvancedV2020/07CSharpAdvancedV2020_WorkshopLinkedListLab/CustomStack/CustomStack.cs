@@ -47,7 +47,7 @@ namespace CustomStack
             int lastItem = this.items[lastIndex];
             this.count--;
 
-            return lastIndex;
+            return lastItem;
         }
 
         public int Peek()
@@ -60,7 +60,7 @@ namespace CustomStack
             int lastIndex = this.count - 1;
             int lastItem = this.items[lastIndex];            
 
-            return lastIndex;
+            return lastItem;
         }
 
         public void ForEach(Action<int> action)
