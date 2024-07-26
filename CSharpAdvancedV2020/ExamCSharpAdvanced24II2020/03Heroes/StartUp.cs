@@ -53,7 +53,7 @@ namespace Heroes
             Console.WriteLine(repository);
             //Hero: Hero Name - 24lvl
             //Item:
-            //*Strength: 23
+            //    *Strength: 23
             //    * Ability: 35
             //    * Intelligence: 48
             //Hero: Second Hero Name - 125lvl
