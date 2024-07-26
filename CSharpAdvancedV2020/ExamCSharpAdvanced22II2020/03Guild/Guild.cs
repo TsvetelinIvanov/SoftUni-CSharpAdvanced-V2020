@@ -39,6 +39,7 @@ namespace Guild
             }
 
             this.roster.Remove(removedPlayer);
+            
             return true;
         }
 
