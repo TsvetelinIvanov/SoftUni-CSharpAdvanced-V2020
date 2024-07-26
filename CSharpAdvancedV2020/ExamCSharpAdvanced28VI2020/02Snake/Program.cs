@@ -119,9 +119,9 @@ namespace _02Snake
             }
         }
 
-        private static bool IsInShape(char[,] field, int playerRow, int playerCol)
+        private static bool IsInShape(char[,] shape, int snakeRow, int snakeCol)
         {
-            return playerRow >= 0 && playerRow < field.GetLength(0) && playerCol >= 0 && playerCol < field.GetLength(1);
+            return snakeRow >= 0 && snakeRow < shape.GetLength(0) && snakeCol >= 0 && snakeCol < shape.GetLength(1);
         }
 
         private static int Move(char[,] shape, int[] snakePosition, int[] burrowsPositions, int snakeRow, int snakeCol, int foodEaten)
