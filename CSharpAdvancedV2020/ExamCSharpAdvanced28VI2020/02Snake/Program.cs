@@ -67,7 +67,7 @@ namespace _02Snake
                         foodEaten = Move(shape, snakePosition, burrowsPositions, snakeRow, snakeCol, foodEaten);
                         break;
                     default:
-                        throw new InvalidOperationException("Unexisting direction!");
+                        throw new InvalidOperationException("Inexistent direction!");
                 }
 
                 if (foodEaten>= 10 || isGameOver)
