@@ -56,7 +56,6 @@ namespace _02ReVolt
                         {
                             newPlayerRowDown = 0;
                         }
-
                         
                         if (matrix[newPlayerRowDown, playerCol] == 'B')
                         {
