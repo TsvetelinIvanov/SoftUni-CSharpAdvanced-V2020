@@ -169,7 +169,7 @@ namespace _02TronRacers
 
                     break;
                 default:
-                    throw new InvalidOperationException("Unexisting direction!");                    
+                    throw new InvalidOperationException("Inexistent direction!");                    
             }
 
             playerPosition[0] = playerRow;
