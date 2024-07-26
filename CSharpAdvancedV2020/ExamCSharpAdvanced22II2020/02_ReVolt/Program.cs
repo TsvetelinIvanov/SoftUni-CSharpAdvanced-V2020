@@ -25,6 +25,7 @@ namespace _02_ReVolt
                     matrix[row, col] = currentRow[col];
                 }
             }
+            
             bool isWon = false;
             for (int i = 0; i < commands; i++)
             {
