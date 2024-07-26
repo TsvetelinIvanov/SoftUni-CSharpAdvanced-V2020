@@ -15,6 +15,7 @@ namespace Guild
             this.Capacity = capacity;
             this.roster = new List<Player>();
         }
+        
         public string Name { get; private set; }
 
         public int Capacity { get; private set; }
