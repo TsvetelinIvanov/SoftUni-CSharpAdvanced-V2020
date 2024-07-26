@@ -144,6 +144,7 @@ namespace _02_ReVolt
                         {
                             playerCol = 0;
                         }
+                        
                         if (CheckIfBonus(playerRow, playerCol, matrix))
                         {
                             playerCol++;
@@ -160,6 +161,7 @@ namespace _02_ReVolt
                                 playerCol = size - 1;
                             }
                         }
+                        
                         if (CheckIfGoal(playerRow, playerCol, matrix))
                         {
                             isWon = true;
