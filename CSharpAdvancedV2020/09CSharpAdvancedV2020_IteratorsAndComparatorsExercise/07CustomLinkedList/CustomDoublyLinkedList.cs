@@ -144,6 +144,7 @@ namespace CustomDoublyLinkedList
             //{
             //    yield return array[i];
             //}
+            
             ListNode currentElement = this.head;
             while (currentElement != null)
             {
