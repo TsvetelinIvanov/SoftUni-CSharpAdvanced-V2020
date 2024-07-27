@@ -21,6 +21,7 @@ namespace _03MaximalSum
             if (matrixSize[0] < 3 ||  matrixSize[1] < 3)
             {
                 Console.WriteLine(42);
+                
                 return;
             }
 
