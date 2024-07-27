@@ -52,7 +52,8 @@ namespace _12CupsAndBottles
                 //if (notFulfiledCup > 0)
                 //{
                 //    Console.WriteLine("Cups: " + notFulfiledCup + " " + string.Join(" ", cups));
-                //}                
+                //}
+                
                 Console.WriteLine("Cups: " + string.Join(" ", cups));
             }
             else
