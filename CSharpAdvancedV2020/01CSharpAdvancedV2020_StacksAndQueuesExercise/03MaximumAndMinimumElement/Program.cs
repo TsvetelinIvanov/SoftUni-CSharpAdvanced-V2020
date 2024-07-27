@@ -24,18 +24,21 @@ namespace _03MaximumAndMinimumElement
                         {
                             numbers.Pop();
                         }
+                        
                         break;
                     case 3:
                         if (numbers.Count > 0)
                         {
                             Console.WriteLine(numbers.Max());
-                        }                        
+                        }
+                        
                         break;
                     case 4:
                         if (numbers.Count > 0)
                         {
                             Console.WriteLine(numbers.Min());
                         }
+                        
                         break;
                     default:
                         Console.WriteLine("Unknown command!");
