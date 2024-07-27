@@ -3,7 +3,6 @@
     public class Coffee : HotBeverage
     {
         public const double CoffeeMilliliters = 50;
-
         public const decimal CoffeePrice = 3.5m;
 
         public Coffee(string name, double caffeine) : base(name, CoffeePrice, CoffeeMilliliters)
