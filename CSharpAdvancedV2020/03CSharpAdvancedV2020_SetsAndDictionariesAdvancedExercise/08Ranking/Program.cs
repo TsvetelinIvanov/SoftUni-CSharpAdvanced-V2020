@@ -21,6 +21,7 @@ namespace _08Ranking
                 //{
                 //    contests.Add(contest, password);
                 //}
+                
                 contests[contest] = password;
             }
 
