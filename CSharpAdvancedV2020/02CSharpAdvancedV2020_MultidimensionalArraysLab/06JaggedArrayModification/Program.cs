@@ -51,6 +51,7 @@ namespace _06JaggedArrayModification
 
             //    Console.WriteLine();
             //}
+            
             foreach (int[] row in square)
             {
                 Console.WriteLine(string.Join(" ", row));
