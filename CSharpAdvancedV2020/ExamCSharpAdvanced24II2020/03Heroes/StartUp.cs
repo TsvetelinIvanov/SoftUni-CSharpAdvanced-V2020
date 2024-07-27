@@ -61,7 +61,6 @@ namespace Heroes
             //    * Strength: 100
             //    * Ability: 20
             //    * Intelligence: 13
-
         }
     }
 }
