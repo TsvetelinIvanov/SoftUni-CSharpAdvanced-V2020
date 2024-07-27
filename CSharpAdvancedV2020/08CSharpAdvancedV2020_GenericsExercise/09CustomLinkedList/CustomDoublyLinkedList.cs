@@ -131,6 +131,7 @@ namespace CustomDoublyLinkedList
         public override string ToString()
         {
             T[] array = this.ToArray();
+            
             return string.Join(" ", array);
         }
     }
