@@ -13,7 +13,7 @@ namespace PersonsInfo
             for (int i = 0; i < lines; i++)
             {
                 string[] commmanddArgs = Console.ReadLine().Split();
-                var person = new Person(commmanddArgs[0], commmanddArgs[1], int.Parse(commmanddArgs[2]));
+                Person person = new Person(commmanddArgs[0], commmanddArgs[1], int.Parse(commmanddArgs[2]));
                 persons.Add(person);
             }
 
