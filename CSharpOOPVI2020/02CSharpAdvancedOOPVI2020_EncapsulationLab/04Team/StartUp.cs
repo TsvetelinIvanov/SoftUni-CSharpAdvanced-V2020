@@ -12,13 +12,11 @@ namespace PersonsInfo
             for (int i = 0; i < lines; i++)
             {
                 string[] commandArgs = Console.ReadLine().Split();
-                var person = new Person(commandArgs[0], commandArgs[1], int.Parse(commandArgs[2]), decimal.Parse(commandArgs[3]));
-
+                Person person = new Person(commandArgs[0], commandArgs[1], int.Parse(commandArgs[2]), decimal.Parse(commandArgs[3]));
                 persons.Add(person);
             }
 
             Team team = new Team("SoftUni");
-
             foreach (Person person in persons)
             {
                 team.AddPlayer(person);
