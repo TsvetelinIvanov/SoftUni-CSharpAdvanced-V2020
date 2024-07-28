@@ -30,6 +30,7 @@ namespace _04PizzaCalories
                 {
                     throw new ArgumentException($"Pizza name should be between {MinNameLength} and {MaxNameLength} symbols.");
                 }
+                
                 this.name = value;
             }
         }
