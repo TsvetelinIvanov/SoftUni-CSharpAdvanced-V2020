@@ -51,23 +51,29 @@ namespace _04WildFarm
             {
                 case "Hen":
                     double henWingSize = double.Parse(animalData[3]);
+                    
                     return new Hen(name, weight, henWingSize);
                 case "Owl":
                     double owlWingSize = double.Parse(animalData[3]);
+                    
                     return new Owl(name, weight, owlWingSize);
                 case "Mouse":
                     string mouseLivingRegion = animalData[3];
+                    
                     return new Mouse(name, weight, mouseLivingRegion);
                 case "Dog":
                     string dogLivingRegion = animalData[3];
+                    
                     return new Dog(name, weight, dogLivingRegion);
                 case "Cat":
                     string catLivingRegion = animalData[3];
                     string catBreed = animalData[4];
+                    
                     return new Cat(name, weight, catLivingRegion, catBreed);
                 case "Tiger":
                     string tigerLivingRegion = animalData[3];
                     string tigerBreed = animalData[4];
+                    
                     return new Tiger(name, weight, tigerLivingRegion, tigerBreed);
                 default:
                     throw new ArgumentException("Invalid animal type!");
@@ -81,12 +87,16 @@ namespace _04WildFarm
             switch (foodType)
             {
                 case "Vegetable":
+                    
                     return new Vegetable(foodQuantity);
                 case "Fruit":
+                    
                     return new Fruit(foodQuantity);
                 case "Meat":
+                    
                     return new Meat(foodQuantity);
                 case "Seeds":
+                    
                     return new Seeds(foodQuantity);
                 default:
                     throw new ArgumentException("Invalid food type!");
