@@ -50,15 +50,19 @@ namespace _03_Raiding
             {
                 case "Druid":
                     DruidFactory druid = new DruidFactory(name);
+                    
                     return druid;
                 case "Paladin":
                     PaladinFactory paladin = new PaladinFactory(name);
+                    
                     return paladin;
                 case "Rogue":
                     RogueFactory rogue = new RogueFactory(name);
+                    
                     return rogue;
                 case "Warrior":
                     WarriorFactory warrior = new WarriorFactory(name);
+                    
                     return warrior;
                 default:
                     throw new ArgumentException("Invalid hero!");
