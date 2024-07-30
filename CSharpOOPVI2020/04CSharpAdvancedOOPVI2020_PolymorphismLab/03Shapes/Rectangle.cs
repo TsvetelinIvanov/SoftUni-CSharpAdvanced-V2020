@@ -35,6 +35,7 @@ namespace Shapes
                 .AppendLine($" - perimeter: {this.CalculatePerimeter():F2}")
                 .AppendLine($" - area: {this.CalculateArea():F2}")
                 .Append(this.Draw());
+                
             return sb.ToString();
         }
     }
