@@ -25,7 +25,7 @@ namespace _06ValidPerson
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentNullException("value", "The firs name cannot not be null or empty!");
+                    throw new ArgumentNullException("value", "The firts name cannot not be null or empty!");
                 }
 
                 this.firstName = value;
