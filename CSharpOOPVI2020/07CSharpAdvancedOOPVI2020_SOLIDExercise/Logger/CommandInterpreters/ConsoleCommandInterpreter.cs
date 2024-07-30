@@ -55,7 +55,7 @@ namespace Logger.CommandInterpreters
         {
             switch (layoutType)
             {
-                case "SimpleLayout":
+                case "SimpleLayout":                
                     return new SimpleLayout();
                 case "XmlLayout":
                     return new XmlLayout();
@@ -68,9 +68,9 @@ namespace Logger.CommandInterpreters
         {
             switch (appenderType)
             {
-                case "ConsoleAppender":
+                case "ConsoleAppender":                
                     return new ConsoleAppender(layout);
-                case "FileAppender":
+                case "FileAppender":                
                     ILogFile logFile = new LogFile();
                     return new FileAppender(layout, logFile);
                 default:
