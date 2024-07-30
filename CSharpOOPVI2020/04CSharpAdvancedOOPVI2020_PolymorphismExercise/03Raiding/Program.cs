@@ -47,15 +47,19 @@ namespace _03Raiding
             {
                 case "Druid":
                     Druid druid = new Druid(name);
+                    
                     return druid;
                 case "Paladin":
                     Paladin paladin = new Paladin(name);
+                    
                     return paladin;
                 case "Rogue":
                     Rogue rogue = new Rogue(name);
+                    
                     return rogue;
                 case "Warrior":
                     Warrior warrior = new Warrior(name);
+                    
                     return warrior;
                 default:
                     throw new ArgumentException("Invalid hero!");
