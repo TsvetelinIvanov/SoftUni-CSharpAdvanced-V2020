@@ -3,11 +3,11 @@
 [TestFixture]
 public class AxeTests
 {
-    private const int AxeAttackStartPontsCount = 3;
-    private const int AxeDurabilityStartPontsCount = 2;
-    private const int AxeDurabilityPontsCountAfterAttack = 1;    
-    private const int DummyHealthStartPontsCount = 10;
-    private const int DummyExperienceStartPontsCount = 10;
+    private const int AxeAttackStartPointsCount = 3;
+    private const int AxeDurabilityStartPointsCount = 2;
+    private const int AxeDurabilityPointsCountAfterAttack = 1;    
+    private const int DummyHealthStartPointsCount = 10;
+    private const int DummyExperienceStartPointsCount = 10;
     private const string BrokenAxeExceptionMessage = "Axe is broken.";
 
     private Axe axe;
@@ -16,15 +16,15 @@ public class AxeTests
     [SetUp]
     public void TestInitialization()
     {
-        this.axe = new Axe(AxeAttackStartPontsCount, AxeDurabilityStartPontsCount);
-        this.dummy = new Dummy(DummyHealthStartPontsCount, DummyExperienceStartPontsCount);
+        this.axe = new Axe(AxeAttackStartPointsCount, AxeDurabilityStartPointsCount);
+        this.dummy = new Dummy(DummyHealthStartPointsCount, DummyExperienceStartPointsCount);
         this.axe.Attack(dummy);
     }
 
     [Test]
     public void AxeLosesDurabilityAfterAttack()
     {      
-        Assert.That(axe.DurabilityPoints, Is.EqualTo(AxeDurabilityPontsCountAfterAttack), "Axe durability doesn't change after attack!");
+        Assert.That(axe.DurabilityPoints, Is.EqualTo(AxeDurabilityPointsCountAfterAttack), "Axe durability doesn't change after attack!");
     }
 
     [Test]
