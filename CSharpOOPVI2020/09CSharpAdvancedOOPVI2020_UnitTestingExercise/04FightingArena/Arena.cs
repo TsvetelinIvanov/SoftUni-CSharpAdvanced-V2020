@@ -13,8 +13,7 @@ namespace _04FightingArena
             this.warriors = new List<Warrior>();
         }
 
-        public IReadOnlyCollection<Warrior> Warriors =>
-            this.warriors;
+        public IReadOnlyCollection<Warrior> Warriors => this.warriors;
 
         public int Count => this.warriors.Count;
 
@@ -30,10 +29,8 @@ namespace _04FightingArena
 
         public void Fight(string attackerName, string defenderName)
         {
-            Warrior attacker = this.warriors
-                .FirstOrDefault(w => w.Name == attackerName);
-            Warrior defender = this.warriors
-                .FirstOrDefault(w => w.Name == defenderName);
+            Warrior attacker = this.warriors.FirstOrDefault(w => w.Name == attackerName);
+            Warrior defender = this.warriors.FirstOrDefault(w => w.Name == defenderName);
 
             if (attacker == null || defender == null)
             {
