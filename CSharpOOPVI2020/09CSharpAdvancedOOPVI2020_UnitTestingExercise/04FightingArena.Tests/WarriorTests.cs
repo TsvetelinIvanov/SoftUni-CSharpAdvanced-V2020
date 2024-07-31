@@ -66,7 +66,7 @@ namespace Tests
         }
 
         [Test]
-        public void InitializeWithInvalidHPThrowsException()
+        public void InitializeWithInvalidHpThrowsException()
         {
             Assert.That(() => this.warrior = new Warrior(WarriorName, WarriorDamage, -1), Throws.ArgumentException.With.Message.EqualTo(InvalidHpExcepionMessage));
         }
