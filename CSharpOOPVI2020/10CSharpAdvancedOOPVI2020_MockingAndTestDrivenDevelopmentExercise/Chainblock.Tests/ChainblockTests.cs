@@ -11,12 +11,12 @@ namespace Chainblock.Tests//The real objects transaction1 and transaction2 are u
     public class ChainblockTests
     {
         private const string ExistingTransactionExceptionMessage = "This transaction was added!";
-        private const string NonExistingIdExceptionMessage = "There is no transaction with id: {0}!";
-        private const string NonExistingStatusExceptionMessage = "There are no transactions with status: {0}!";
-        private const string NonExistingSenderExceptionMessage = "There are no transactions from: {0}!";
-        private const string NonExistingReceiverExceptionMessage = "There are no transactions to: {0}!";
-        private const string NonExistingSenderAndMinAmountExceptionMessage = "There are no transactions from: {0} with amount equal to or bigger than: {1}!";
-        private const string NonExistingReceiverAndAmountRangeExceptionMessage = "There are no transactions to: {0} between {1} (inclusive) and {2} (exclusive)!";
+        private const string NonExistentIdExceptionMessage = "There is no transaction with id: {0}!";
+        private const string NonExistentStatusExceptionMessage = "There are no transactions with status: {0}!";
+        private const string NonExistentSenderExceptionMessage = "There are no transactions from: {0}!";
+        private const string NonExistentReceiverExceptionMessage = "There are no transactions to: {0}!";
+        private const string NonExistentSenderAndMinAmountExceptionMessage = "There are no transactions from: {0} with amount equal to or bigger than: {1}!";
+        private const string NonExistentReceiverAndAmountRangeExceptionMessage = "There are no transactions to: {0} between {1} (inclusive) and {2} (exclusive)!";
         private const string InvanidAmountExceptionMessage = "The amount must be greater than 0!";
 
         private readonly ITransaction transaction1 = new Transaction(1, TransactionStatus.Successfull, "TransactionUser1", "TransactionUser2", 10.5);
@@ -146,7 +146,7 @@ namespace Chainblock.Tests//The real objects transaction1 and transaction2 are u
             this.chainblock.Add(fackeTransaction1.Object);
             this.chainblock.Add(fackeTransaction2.Object);
 
-            Assert.That(() => this.chainblock.RemoveTransactionById(3), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistingIdExceptionMessage, 3)));
+            Assert.That(() => this.chainblock.RemoveTransactionById(3), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistentIdExceptionMessage, 3)));
         }
 
         [Test]
@@ -166,7 +166,7 @@ namespace Chainblock.Tests//The real objects transaction1 and transaction2 are u
             this.chainblock.Add(fackeTransaction1.Object);
             this.chainblock.Add(fackeTransaction2.Object);
 
-            Assert.That(() => this.chainblock.GetById(3), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistingIdExceptionMessage, 3)));
+            Assert.That(() => this.chainblock.GetById(3), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistentIdExceptionMessage, 3)));
         }
 
         [Test]
@@ -188,7 +188,7 @@ namespace Chainblock.Tests//The real objects transaction1 and transaction2 are u
 
             this.chainblock.ChangeTransactionStatus(2, TransactionStatus.Successfull);
 
-            Assert.That(() => this.chainblock.ChangeTransactionStatus(3, TransactionStatus.Successfull), Throws.ArgumentException.With.Message.EqualTo(string.Format(NonExistingIdExceptionMessage, 3)));
+            Assert.That(() => this.chainblock.ChangeTransactionStatus(3, TransactionStatus.Successfull), Throws.ArgumentException.With.Message.EqualTo(string.Format(NonExistentIdExceptionMessage, 3)));
         }
 
         [Test]
@@ -213,7 +213,7 @@ namespace Chainblock.Tests//The real objects transaction1 and transaction2 are u
             this.chainblock.Add(fackeTransaction1.Object);
             this.chainblock.Add(fackeTransaction2.Object);          
 
-            Assert.That(() => this.chainblock.GetByTransactionStatus(TransactionStatus.Unauthorized), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistingStatusExceptionMessage, TransactionStatus.Unauthorized)));       
+            Assert.That(() => this.chainblock.GetByTransactionStatus(TransactionStatus.Unauthorized), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistentStatusExceptionMessage, TransactionStatus.Unauthorized)));       
         }
 
         [Test]
@@ -238,7 +238,7 @@ namespace Chainblock.Tests//The real objects transaction1 and transaction2 are u
             this.chainblock.Add(fackeTransaction1.Object);
             this.chainblock.Add(fackeTransaction2.Object);           
 
-            Assert.That(() => this.chainblock.GetAllSendersWithTransactionStatus(TransactionStatus.Unauthorized), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistingStatusExceptionMessage, TransactionStatus.Unauthorized)));
+            Assert.That(() => this.chainblock.GetAllSendersWithTransactionStatus(TransactionStatus.Unauthorized), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistentStatusExceptionMessage, TransactionStatus.Unauthorized)));
         }
 
         [Test]
@@ -263,7 +263,7 @@ namespace Chainblock.Tests//The real objects transaction1 and transaction2 are u
             this.chainblock.Add(fackeTransaction1.Object);
             this.chainblock.Add(fackeTransaction2.Object);
 
-            Assert.That(() => this.chainblock.GetAllReceiversWithTransactionStatus(TransactionStatus.Unauthorized), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistingStatusExceptionMessage, TransactionStatus.Unauthorized)));
+            Assert.That(() => this.chainblock.GetAllReceiversWithTransactionStatus(TransactionStatus.Unauthorized), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistentStatusExceptionMessage, TransactionStatus.Unauthorized)));
         }
 
         [Test]
@@ -375,7 +375,7 @@ namespace Chainblock.Tests//The real objects transaction1 and transaction2 are u
             this.chainblock.Add(fackeTransaction1.Object);
             this.chainblock.Add(fackeTransaction2.Object);
 
-            Assert.That(() => this.chainblock.GetBySenderOrderedByAmountDescending("FakeTransactionUser3"), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistingSenderExceptionMessage, "FakeTransactionUser3")));
+            Assert.That(() => this.chainblock.GetBySenderOrderedByAmountDescending("FakeTransactionUser3"), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistentSenderExceptionMessage, "FakeTransactionUser3")));
         }
 
         [Test]
@@ -402,7 +402,7 @@ namespace Chainblock.Tests//The real objects transaction1 and transaction2 are u
             this.chainblock.Add(fackeTransaction1.Object);
             this.chainblock.Add(fackeTransaction2.Object);
 
-            Assert.That(() => this.chainblock.GetByReceiverOrderedByAmountThenById("FakeTransactionUser1"), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistingReceiverExceptionMessage, "FakeTransactionUser1")));
+            Assert.That(() => this.chainblock.GetByReceiverOrderedByAmountThenById("FakeTransactionUser1"), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistentReceiverExceptionMessage, "FakeTransactionUser1")));
         }
 
         [Test]
@@ -426,7 +426,7 @@ namespace Chainblock.Tests//The real objects transaction1 and transaction2 are u
             this.chainblock.Add(fackeTransaction1.Object);
             this.chainblock.Add(fackeTransaction2.Object);
 
-            Assert.That(() => this.chainblock.GetBySenderAndMinimumAmountDescending("FakeTransactionUser1", 100), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistingSenderAndMinAmountExceptionMessage, "FakeTransactionUser1", 100)));
+            Assert.That(() => this.chainblock.GetBySenderAndMinimumAmountDescending("FakeTransactionUser1", 100), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistentSenderAndMinAmountExceptionMessage, "FakeTransactionUser1", 100)));
         }
 
         [Test]
@@ -461,7 +461,7 @@ namespace Chainblock.Tests//The real objects transaction1 and transaction2 are u
             this.chainblock.Add(fackeTransaction1.Object);
             this.chainblock.Add(fackeTransaction2.Object);
 
-            Assert.That(() => this.chainblock.GetByReceiverAndAmountRange("FakeTransactionUser3", 15, 100), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistingReceiverAndAmountRangeExceptionMessage, "FakeTransactionUser3", 15, 100)));
+            Assert.That(() => this.chainblock.GetByReceiverAndAmountRange("FakeTransactionUser3", 15, 100), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistentReceiverAndAmountRangeExceptionMessage, "FakeTransactionUser3", 15, 100)));
         }
 
         [Test]
