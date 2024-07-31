@@ -3,10 +3,10 @@
 [TestFixture]
 public class DummyTests
 {
-    private const int DummyHealthStartPontsCount = 20;
-    private const int DummyExperienceStartPontsCount = 10;
+    private const int DummyHealthStartPointsCount = 20;
+    private const int DummyExperienceStartPointsCount = 10;
     private const int DummyLosesAfterAttack = 5;
-    private const int DummyHealthPontsAfterAttack = 15;
+    private const int DummyHealthPointsAfterAttack = 15;
     private const string DummyDeadExceptionMessage = "Dummy is dead.";
     private const string DummyNotDeadExceptionMessage = "Target is not dead.";
 
@@ -15,14 +15,14 @@ public class DummyTests
     [SetUp]
     public void TestInitialization()
     {
-        this.dummy = new Dummy(DummyHealthStartPontsCount, DummyExperienceStartPontsCount);
+        this.dummy = new Dummy(DummyHealthStartPointsCount, DummyExperienceStartPointsCount);
         this.dummy.TakeAttack(DummyLosesAfterAttack);
     }
 
     [Test]
     public void DummyLosesHealthAfterAttack()
     {      
-        Assert.That(dummy.Health, Is.EqualTo(DummyHealthPontsAfterAttack), "Dummy's health does not change after attack!");
+        Assert.That(dummy.Health, Is.EqualTo(DummyHealthPointsAfterAttack), "Dummy's health does not change after attack!");
     }
 
     [Test]
@@ -43,11 +43,11 @@ public class DummyTests
         this.dummy.TakeAttack(DummyLosesAfterAttack);
 
         int givenExperience = dummy.GiveExperience();
-        Assert.That(givenExperience, Is.EqualTo(DummyExperienceStartPontsCount), "Dead dummy does not give experience!");
+        Assert.That(givenExperience, Is.EqualTo(DummyExperienceStartPointsCount), "Dead dummy does not give experience!");
     }
 
     [Test]
-    public void AliveDummyCanNotGiveExperience()
+    public void AliveDummyCannotGiveExperience()
     {        
         Assert.That(() => dummy.GiveExperience(), Throws.InvalidOperationException.With.Message.EqualTo(DummyNotDeadExceptionMessage), "Alive dummy does not throw ecxepion after trying to get experience!");
     }
