@@ -2,8 +2,7 @@
 {
     public class Progress
     {
-        private readonly IStreamable streamable;
-        
+        private readonly IStreamable streamable;        
 
         public Progress(IStreamable streamable)
         {
