@@ -1,4 +1,4 @@
-﻿using _04FightingArena;//For Judge must be commented: using _04FightingArena; and <ProjectReference Include="..\04FightingArena\04FightingArena.csproj" /> in 04FightingArena.Tests.csproj file
+﻿using _04FightingArena;//For Judge - it must be commented: using _04FightingArena; and <ProjectReference Include="..\04FightingArena\04FightingArena.csproj" /> in 04FightingArena.Tests.csproj file
 using NUnit.Framework;
 
 namespace Tests
