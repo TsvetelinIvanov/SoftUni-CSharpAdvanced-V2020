@@ -3,10 +3,10 @@
 [TestFixture]
 public class DummyTests
 {
-    private const int DummyHealthStartPontsCount = 20;
-    private const int DummyExperienceStartPontsCount = 10;
+    private const int DummyHealthStartPointsCount = 20;
+    private const int DummyExperienceStartPointsCount = 10;
     private const int DummyLosesAfterAttack = 5;
-    private const int DummyHealthPontsAfterAttack = 15;    
+    private const int DummyHealthPointsAfterAttack = 15;    
     private const string DummyDeadExceptionMessage = "Dummy is dead.";
     private const string DummyNotDeadExceptionMessage = "Target is not dead.";
 
@@ -14,20 +14,20 @@ public class DummyTests
     public void DummyLosesHealthAfterAttack()
     {
         //Arrange
-        Dummy dummy = new Dummy(DummyHealthStartPontsCount, DummyExperienceStartPontsCount);
+        Dummy dummy = new Dummy(DummyHealthStartPointsCount, DummyExperienceStartPointsCount);
 
         //Act
         dummy.TakeAttack(DummyLosesAfterAttack);
 
         //Assert
-        Assert.That(dummy.Health, Is.EqualTo(DummyHealthPontsAfterAttack));
+        Assert.That(dummy.Health, Is.EqualTo(DummyHealthPointsAfterAttack));
     }
 
     [Test]
     public void DeadDummyThrowsExceptionAfterAttack()
     {
         //Arrange
-        Dummy dummy = new Dummy(DummyHealthStartPontsCount, DummyExperienceStartPontsCount);
+        Dummy dummy = new Dummy(DummyHealthStartPointsCount, DummyExperienceStartPointsCount);
 
         //Act
         dummy.TakeAttack(DummyLosesAfterAttack);
@@ -43,7 +43,7 @@ public class DummyTests
     public void DeadDummyGiveEperience()
     {
         //Arrange
-        Dummy dummy = new Dummy(DummyHealthStartPontsCount, DummyExperienceStartPontsCount);
+        Dummy dummy = new Dummy(DummyHealthStartPointsCount, DummyExperienceStartPointsCount);
 
         //Act
         dummy.TakeAttack(DummyLosesAfterAttack);
@@ -52,14 +52,14 @@ public class DummyTests
         dummy.TakeAttack(DummyLosesAfterAttack);
 
         //Assert
-        Assert.That(() => dummy.GiveExperience(), Is.EqualTo(DummyExperienceStartPontsCount));
+        Assert.That(() => dummy.GiveExperience(), Is.EqualTo(DummyExperienceStartPointsCount));
     }
 
     [Test]
-    public void AliveDummyCanNotGiveExperience()
+    public void AliveDummyCannotGiveExperience()
     {
         //Arrange
-        Dummy dummy = new Dummy(DummyHealthStartPontsCount, DummyExperienceStartPontsCount);
+        Dummy dummy = new Dummy(DummyHealthStartPointsCount, DummyExperienceStartPointsCount);
 
         //Act
         dummy.TakeAttack(DummyLosesAfterAttack);        
