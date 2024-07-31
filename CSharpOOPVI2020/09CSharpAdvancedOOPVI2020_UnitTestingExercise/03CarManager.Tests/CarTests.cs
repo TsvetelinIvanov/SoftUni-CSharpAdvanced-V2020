@@ -1,4 +1,4 @@
-﻿using _03CarManager;//For Judge must be commented: using _03CarManager; and <ProjectReference Include="..\03CarManager\03CarManager.csproj" /> in 03CarManager.Tests.csproj file
+﻿using _03CarManager;//For Judge - it must be commented: using _03CarManager; and <ProjectReference Include="..\03CarManager\03CarManager.csproj" /> in 03CarManager.Tests.csproj file
 using NUnit.Framework;
 
 namespace Tests
