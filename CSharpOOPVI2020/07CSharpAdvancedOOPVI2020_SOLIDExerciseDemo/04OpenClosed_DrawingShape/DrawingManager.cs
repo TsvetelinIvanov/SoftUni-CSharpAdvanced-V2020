@@ -24,7 +24,7 @@ namespace _04OpenClosed_DrawingShape
             IDrawingStrategy drawer = this.strategies.FirstOrDefault(s => s.IsMatch(shape));
             if (drawer == null)
             {
-                throw new ArgumentException($"The shape \"{shape.GetType().Name}\" is not supported from ouer drawer!");
+                throw new ArgumentException($"The shape \"{shape.GetType().Name}\" is not supported by our drawer!");
             }
             
             drawer.Draw(shape);
