@@ -11,6 +11,7 @@ namespace _05OpenClosed_ShoppingCart.Rules
             total += orderItem.Quantity * .4m;
             int setsOfThree = orderItem.Quantity / 3;
             total -= setsOfThree * .2m;
+            
             return total;
         }
 
