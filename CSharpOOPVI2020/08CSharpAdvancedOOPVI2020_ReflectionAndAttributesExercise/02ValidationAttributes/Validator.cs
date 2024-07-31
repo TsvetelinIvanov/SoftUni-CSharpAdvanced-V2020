@@ -7,8 +7,7 @@ namespace ValidationAttributes
     public static class Validator
     {
         public static bool IsValid(object obj)
-        {
-            
+        {            
             bool isValid = true;
             Type type = obj.GetType();
             PropertyInfo[] properties = type.GetProperties();
