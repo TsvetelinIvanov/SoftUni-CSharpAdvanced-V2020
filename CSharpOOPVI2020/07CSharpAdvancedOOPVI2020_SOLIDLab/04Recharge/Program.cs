@@ -6,10 +6,11 @@ namespace _04Recharge
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee("IvanIvanov000786");
+            Employee employee = new Employee("IvanIvanov000786");            
             Robot robot = new Robot("RHP000908", 12);
+            
             robot.Recharge();
-
+            
             employee.Work(8);
             robot.Work(8);
 
