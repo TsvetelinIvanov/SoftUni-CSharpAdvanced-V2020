@@ -10,17 +10,17 @@ namespace Tests
         private const int EmptyDatabaseCount = 0;
         private const int AlmostFullCapacityCount = 15;
         private const int ExpectedPersonId = 1;
-        private const int NonExistingPersonId = 18;
+        private const int NonExistentPersonId = 18;
         private const string ExpectedPersonUsername = "User1";
-        private const string NonExistingPersonUsername = "User18";
+        private const string NonExistentPersonUsername = "User18";
         private const string RangeCapacityExceptionMessage = "Provided data length should be in range [0..16]!";
         private const string FullCapacityExceptionMessage = "Array's capacity must be exactly 16 integers!";
         private const string ExistingUsernameExceptionMessage = "There is already user with this username!";
         private const string ExistingIdExceptionMessage = "There is already user with this Id!";
         private const string NullUsernameExceptionMessage = "Username parameter is null!";
-        private const string NonExistingUsernameExceptionMessage = "No user is present by this username!";        
+        private const string NonExistentUsernameExceptionMessage = "No user is present by this username!";        
         private const string NegativeIdExceptionMessage = "Id should be a positive number!";
-        private const string NonExistingIdExceptionMessage = "No user is present by this ID!";
+        private const string NonExistentIdExceptionMessage = "No user is present by this ID!";
 
         private ExtendedDatabase extendedDatabase;
 
@@ -124,9 +124,9 @@ namespace Tests
         }
 
         [Test]
-        public void FindByUsernameThrowsIfNonExistingUsername()
+        public void FindByUsernameThrowsIfNonExistentUsername()
         {
-            Assert.That(() => this.extendedDatabase.FindByUsername(NonExistingPersonUsername), Throws.InvalidOperationException.With.Message.EqualTo(NonExistingUsernameExceptionMessage));
+            Assert.That(() => this.extendedDatabase.FindByUsername(NonExistentPersonUsername), Throws.InvalidOperationException.With.Message.EqualTo(NonExistentUsernameExceptionMessage));
         }
 
         [Test]
@@ -152,9 +152,9 @@ namespace Tests
         }
 
         [Test]
-        public void FindByIdThrowsIfNonExistingId()
+        public void FindByIdThrowsIfNonExistentId()
         {
-            Assert.That(() => this.extendedDatabase.FindById(NonExistingPersonId), Throws.InvalidOperationException.With.Message.EqualTo(NonExistingIdExceptionMessage));
+            Assert.That(() => this.extendedDatabase.FindById(NonExistentPersonId), Throws.InvalidOperationException.With.Message.EqualTo(NonExistentIdExceptionMessage));
         }
     }
 }
