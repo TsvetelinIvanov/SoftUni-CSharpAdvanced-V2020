@@ -8,6 +8,7 @@ namespace _01Singleton
         {
             SingletonDataContainer singletonContainer = SingletonDataContainer.Instance;
             Console.WriteLine(singletonContainer.GetPopulation("Washington, D.C."));
+            
             SingletonDataContainer singletonContainer1 = SingletonDataContainer.Instance;
             Console.WriteLine(singletonContainer1.GetPopulation("London"));
         }
