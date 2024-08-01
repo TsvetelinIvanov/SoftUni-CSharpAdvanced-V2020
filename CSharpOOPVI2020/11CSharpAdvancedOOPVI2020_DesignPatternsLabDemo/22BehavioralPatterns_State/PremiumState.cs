@@ -29,6 +29,7 @@
         public override void Withdraw(double amount)
         {
             this.Balance -= amount;
+            
             this.StateChangeCheck();
         }
 
