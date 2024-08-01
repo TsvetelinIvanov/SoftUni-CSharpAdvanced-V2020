@@ -51,6 +51,10 @@ namespace _19BehavioralPatterns_Strategy
         }
     }";
             Console.WriteLine("MergeSorted list ");
+            foreach (string name in list) 
+            {
+                  Console.WriteLine(name);
+            }
         }
     }
 }
