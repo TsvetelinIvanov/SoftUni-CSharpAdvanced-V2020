@@ -7,7 +7,7 @@ namespace _19BehavioralPatterns_Strategy
     {
         public override void Sort(List<string> list)
         {
-            list.Sort();
+            //list.Sort(); QuickSort is not implemented
             string quickSortString = @"
     public static class Quicksort<T> where T : IComparable<T>
     {
@@ -84,7 +84,10 @@ namespace _19BehavioralPatterns_Strategy
     }";
     
             Console.WriteLine("QuickSorted list ");
-            
+            foreach (string name in list) 
+            {
+                  Console.WriteLine(name);
+            }
         }
     }
 }
