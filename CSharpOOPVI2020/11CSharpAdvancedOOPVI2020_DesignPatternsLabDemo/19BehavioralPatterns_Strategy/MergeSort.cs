@@ -7,7 +7,7 @@ namespace _19BehavioralPatterns_Strategy
     {
         public override void Sort(List<string> list)
         {
-            //list.MergeSort(); not-implemented
+            //list.Sort(); MergeSort is not implemented
             string mergeSortString = @"
     public static class MergeSort<T> where T : IComparable
     {
