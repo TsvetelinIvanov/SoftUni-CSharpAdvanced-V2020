@@ -10,7 +10,7 @@ namespace _19BehavioralPatterns_Strategy
             //list.MergeSort(); not-implemented
             string mergeSortString = @"
     public static class MergeSort<T> where T : IComparable
-        {
+    {
         public static void Sort(T[] array)
         {
             T[] auxiliaryArray = new T[array.Length];
@@ -50,6 +50,7 @@ namespace _19BehavioralPatterns_Strategy
             }
         }
     }";
+    
             Console.WriteLine("MergeSorted list ");
             foreach (string name in list) 
             {
