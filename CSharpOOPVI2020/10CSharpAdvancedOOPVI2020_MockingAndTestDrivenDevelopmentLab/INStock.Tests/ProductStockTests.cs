@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace INStock.Tests//The Mock objects cannot compare well by references - in this cases real objects must be used!
+namespace INStock.Tests//The Mock objects cannot compare well by references - in these cases real objects must be used!
 {
     public class ProductStockTests
     {
