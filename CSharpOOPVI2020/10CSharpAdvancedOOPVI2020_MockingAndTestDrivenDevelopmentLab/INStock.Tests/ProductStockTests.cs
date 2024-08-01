@@ -99,7 +99,7 @@ namespace INStock.Tests//The Mock objects cannot compare well by references - in
 
         [TestCase(-1)]
         [TestCase(2)]
-        public void IndexerThrowsIfTryGetOtOfRange(int index)
+        public void IndexerThrowsIfTryGetOutOfRange(int index)
         {
             this.products.Add(this.fakeProduct1.Object);
             this.products.Add(this.fakeProduct2.Object);
@@ -116,7 +116,7 @@ namespace INStock.Tests//The Mock objects cannot compare well by references - in
 
         [TestCase(-1)]
         [TestCase(2)]
-        public void IndexerThrowsIfTrySetOtOfRange(int index)
+        public void IndexerThrowsIfTrySetOutOfRange(int index)
         {
             this.products.Add(this.fakeProduct1.Object);
             this.products.Add(this.fakeProduct2.Object);
@@ -233,7 +233,7 @@ namespace INStock.Tests//The Mock objects cannot compare well by references - in
             this.products.Add(this.product1);
             this.products.Add(this.product2);            
                        
-            Assert.That(() => this.products.FindByLabel("Product3"), Throws.ArgumentException.With.Message.EqualTo(string.Format(NonExistingLabelExceptionMessage, "Product3")));
+            Assert.That(() => this.products.FindByLabel("Product3"), Throws.ArgumentException.With.Message.EqualTo(string.Format(NonExistentLabelExceptionMessage, "Product3")));
         }
 
         [Test]
