@@ -6,12 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace INStock.Tests//The Mock objects can not good compare by references - in this cases must be used real objects
+namespace INStock.Tests//The Mock objects cannot compare well by references - in this cases real objects must be used!
 {
     public class ProductStockTests
     {
         private const string IndexOutOfRangeExceptionMessage = "The index must be in range [0..{0}]";        
-        private const string NonExistingLabelExceptionMessage = "There is no {0} in the stock!";
+        private const string NonExistentLabelExceptionMessage = "There is no {0} in the stock!";
         private const string InvalidPriceExceptionMessage = "The price must be greater than 0!";
         private const string InvalidQuantityExceptionMessage = "The quantity can not be negative or 0!";        
         private const string EmptyStockExceptionMessage = "Our stock is empty!";
@@ -29,14 +29,17 @@ namespace INStock.Tests//The Mock objects can not good compare by references - i
         public void Initialization()
         {
             this.products = new ProductStock();
+            
             this.fakeProduct1 = new Mock<IProduct>();
             fakeProduct1.Setup(fp => fp.Label).Returns("FakeProduct1");
             fakeProduct1.Setup(fp => fp.Price).Returns(10.09m);
             fakeProduct1.Setup(fp => fp.Quantity).Returns(100);
+            
             this.fakeProduct2 = new Mock<IProduct>();
             fakeProduct1.Setup(fp => fp.Label).Returns("FakeProduct2");
             fakeProduct1.Setup(fp => fp.Price).Returns(9.99m);
             fakeProduct1.Setup(fp => fp.Quantity).Returns(10);
+            
             this.fakeProduct3 = new Mock<IProduct>();
             fakeProduct1.Setup(fp => fp.Label).Returns("FakeProduct3");
             fakeProduct1.Setup(fp => fp.Price).Returns(10.10m);
