@@ -50,7 +50,7 @@ namespace _19BehavioralPatterns_Strategy
             }
         }
     }";
-            Console.WriteLine("MergeSorted list: " + mergeSortString);
+            Console.WriteLine("MergeSorted list: ");
         }
     }
 }
