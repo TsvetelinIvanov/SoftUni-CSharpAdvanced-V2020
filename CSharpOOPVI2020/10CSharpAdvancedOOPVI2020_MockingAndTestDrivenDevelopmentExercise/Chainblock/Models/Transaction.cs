@@ -37,7 +37,9 @@ namespace Chainblock.Models
                 this.id = value;
             }
         }
+        
         public TransactionStatus Status { get; set; }
+        
         public string From
         {
             get { return this.from; }
