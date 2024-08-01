@@ -34,24 +34,28 @@ namespace Chainblock.Tests//The real objects transaction1 and transaction2 are u
         public void Inicialization()
         {
             this.chainblock = new Chainblock.Models.Chainblock();
+            
             this.fackeTransaction1 = new Mock<ITransaction>();
             fackeTransaction1.Setup(t => t.Id).Returns(1);
             fackeTransaction1.Setup(t => t.Status).Returns(TransactionStatus.Successfull);
             fackeTransaction1.Setup(t => t.From).Returns("FakeTransactionUser1");
             fackeTransaction1.Setup(t => t.To).Returns("FakeTransactionUser2");
             fackeTransaction1.Setup(t => t.Amount).Returns(10.5);
+            
             this.fackeTransaction2 = new Mock<ITransaction>();
             fackeTransaction2.Setup(t => t.Id).Returns(2);
             fackeTransaction2.Setup(t => t.Status).Returns(TransactionStatus.Failed);
             fackeTransaction2.Setup(t => t.From).Returns("FakeTransactionUser1");
             fackeTransaction2.Setup(t => t.To).Returns("FakeTransactionUser3");
             fackeTransaction2.Setup(t => t.Amount).Returns(12.5);
+            
             this.fackeTransaction3 = new Mock<ITransaction>();
             fackeTransaction3.Setup(t => t.Id).Returns(3);
             fackeTransaction3.Setup(t => t.Status).Returns(TransactionStatus.Successfull);
             fackeTransaction3.Setup(t => t.From).Returns("FakeTransactionUser2");
             fackeTransaction3.Setup(t => t.To).Returns("FakeTransactionUser3");
             fackeTransaction3.Setup(t => t.Amount).Returns(100);
+            
             this.fackeTransaction4 = new Mock<ITransaction>();
             fackeTransaction4.Setup(t => t.Id).Returns(4);
             fackeTransaction4.Setup(t => t.Status).Returns(TransactionStatus.Successfull);
