@@ -10,7 +10,7 @@ namespace Aquariums.Tests
         private const string InvalidNameExceptionMessage = "Invalid aquarium name!";
         private const string InvalidCapacityExceptionMessage = "Invalid aquarium capacity!";
         private const string FullAquariumAddingExceptionMessage = "Aquarium is full!";
-        private const string InExistingFishExceptionMessage = "Fish with the name {0} doesn't exist!";
+        private const string NonExistentFishExceptionMessage = "Fish with the name {0} doesn't exist!";
         private const string ReportOutputMessage = "Fish available at {0}: {1}";
 
         private readonly Fish fish1 = new Fish("Fish1");
@@ -83,12 +83,12 @@ namespace Aquariums.Tests
         }
 
         [Test]
-        public void RemoveFishThrowsIfInexistingFish()
+        public void RemoveFishThrowsIfNonExistentFish()
         {
             this.aquarium.Add(this.fish1);
             this.aquarium.Add(this.fish2);
 
-            Assert.That(() => this.aquarium.RemoveFish(fish3.Name), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(InExistingFishExceptionMessage, fish3.Name)));
+            Assert.That(() => this.aquarium.RemoveFish(fish3.Name), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistentFishExceptionMessage, fish3.Name)));
         }
 
         [Test]
@@ -105,12 +105,12 @@ namespace Aquariums.Tests
         }
 
         [Test]
-        public void SellFishThrowsIfInexistingFish()
+        public void SellFishThrowsIfNonExistentFish()
         {
             this.aquarium.Add(this.fish1);
             this.aquarium.Add(this.fish2);
 
-            Assert.That(() => this.aquarium.SellFish(fish3.Name), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(InExistingFishExceptionMessage, fish3.Name)));
+            Assert.That(() => this.aquarium.SellFish(fish3.Name), Throws.InvalidOperationException.With.Message.EqualTo(string.Format(NonExistentFishExceptionMessage, fish3.Name)));
         }
 
         [Test]
