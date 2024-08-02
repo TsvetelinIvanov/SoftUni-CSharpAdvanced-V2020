@@ -22,7 +22,7 @@
             }
         }
 
-        private void SetVertivalLine(int leftX)
+        private void SetVerticalLine(int leftX)
         {
             for (int topY = 0; topY < this.TopY; topY++)
             {
@@ -35,8 +35,8 @@
             this.SetHorizontalLine(0);
             this.SetHorizontalLine(this.TopY);
 
-            this.SetVertivalLine(0);
-            this.SetVertivalLine(this.LeftX - 1);
+            this.SetVerticalLine(0);
+            this.SetVerticalLine(this.LeftX - 1);
         }
     }
 }
