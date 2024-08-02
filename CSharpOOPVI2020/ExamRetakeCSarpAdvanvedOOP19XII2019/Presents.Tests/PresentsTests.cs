@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+xis﻿using NUnit.Framework;
 using System.Linq;
 
 namespace Presents.Tests
@@ -88,7 +88,7 @@ namespace Presents.Tests
         }
 
         [Test]
-        public void RemoveNotRemovesInexisingPresent()
+        public void RemoveNotRemovesNonExistentPresent()
         {
             this.bag.Create(this.present1);
             this.bag.Create(this.present2);            
@@ -130,7 +130,7 @@ namespace Presents.Tests
         }
 
         [Test]
-        public void GetPresentNullIfEmptyCollection()
+        public void GetPresentReturnsNullIfEmptyCollection()
         {
             Present present = this.bag.GetPresent(this.present1.Name);
 
@@ -138,7 +138,7 @@ namespace Presents.Tests
         }
 
         [Test]
-        public void GetPresentNullIfPresentNotExists()
+        public void GetPresentReturnsNullIfPresentDoesNotExist()
         {
             this.bag.Create(this.present1);
             this.bag.Create(this.present2);
