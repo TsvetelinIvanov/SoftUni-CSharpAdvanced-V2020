@@ -36,6 +36,7 @@ namespace Computers
             Computer computer = this.GetComputer(manufacturer, model);
 
             this.computers.Remove(computer);
+            
             return computer;
         }
 
@@ -44,9 +45,7 @@ namespace Computers
             this.ValidateNullValue(manufacturer, nameof(manufacturer), CanNotBeNullMessage);
             this.ValidateNullValue(model, nameof(model), CanNotBeNullMessage);
 
-            Computer computer = this.computers
-                .FirstOrDefault(c => c.Manufacturer == manufacturer && c.Model == model);
-
+            Computer computer = this.computers.FirstOrDefault(c => c.Manufacturer == manufacturer && c.Model == model);
             if (computer == null)
             {
                 throw new ArgumentException("There is no computer with this manufacturer and model.");
@@ -59,9 +58,7 @@ namespace Computers
         {
             this.ValidateNullValue(manufacturer, nameof(manufacturer), CanNotBeNullMessage);
 
-            ICollection<Computer> computers = this.computers
-                .Where(c => c.Manufacturer == manufacturer)
-                .ToList();
+            ICollection<Computer> computers = this.computers.Where(c => c.Manufacturer == manufacturer).ToList();
 
             return computers;
         }
