@@ -137,7 +137,8 @@ namespace Computers.Tests
         {
             Assert.That(() => this.computerManager.RemoveComputer(this.computer1.Manufacturer, null), Throws.ArgumentNullException);
         }
-
+        
+        [Test]
         public void RemoveComputerThrousIfInexistantComputer()
         {
             this.computerManager.AddComputer(this.computer1);
@@ -162,7 +163,8 @@ namespace Computers.Tests
             Assert.IsTrue(computers.Contains(this.computer2));
             Assert.IsFalse(computers.Contains(this.computer3));
         }
-
+        
+        [Test]
         public void GetComputersByManufacturerReturnsEmptyCollectionIfInexistantManufacturer()
         {
             this.computerManager.AddComputer(this.computer1);
