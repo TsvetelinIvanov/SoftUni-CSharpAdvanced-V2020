@@ -13,6 +13,7 @@
             //Clerk Harry's new income: 27 500,00 лв.
             //Director Edward's new income: 38 500,00 лв.
             //President Damond's new income: 49 500,00 лв.
+            
             employees.Accept(new VacationVisitor());
             //Clerk Harry's new vacation days: 17
             //Director Edward's new vacation days: 19
