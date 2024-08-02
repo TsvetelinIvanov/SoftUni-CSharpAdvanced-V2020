@@ -71,7 +71,7 @@ namespace OnlineShop.Models.Products.Computers
             IComponent component = this.Components.FirstOrDefault(c => c.GetType().Name == componentType);
             if (component == null)
             {
-                throw new ArgumentException(string.Format(ExceptionMessages.NotExistingComponent, componentType, this.GetType().Name, this.Id));
+                throw new ArgumentException(string.Format(ExceptionMessages.NonExistentComponent, componentType, this.GetType().Name, this.Id));
             }
 
             this.components.Remove(component);
@@ -94,7 +94,7 @@ namespace OnlineShop.Models.Products.Computers
             IPeripheral peripheral = this.Peripherals.FirstOrDefault(p => p.GetType().Name == peripheralType);
             if (peripheral == null)
             {
-                throw new ArgumentException(string.Format(ExceptionMessages.NotExistingPeripheral, peripheralType, this.GetType().Name, this.Id)); ;
+                throw new ArgumentException(string.Format(ExceptionMessages.NonExistentPeripheral, peripheralType, this.GetType().Name, this.Id)); ;
             }
 
             this.peripherals.Remove(peripheral);
