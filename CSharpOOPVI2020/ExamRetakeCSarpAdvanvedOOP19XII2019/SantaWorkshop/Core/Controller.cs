@@ -101,6 +101,7 @@ namespace SantaWorkshop.Core
             if (present.IsDone())
             {
                 this.craftedPresentsCount++;
+                
                 return string.Format(OutputMessages.PresentIsDone, present.Name);
             }
             else
