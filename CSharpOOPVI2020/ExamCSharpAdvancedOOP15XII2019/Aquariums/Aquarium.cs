@@ -68,7 +68,6 @@ namespace Aquariums
         public void RemoveFish(string name)
         {
             Fish fishToRemove = this.fish.FirstOrDefault(x => x.Name == name);
-
             if (fishToRemove == null)
             {
                 throw new InvalidOperationException($"Fish with the name {name} doesn't exist!");
@@ -80,7 +79,6 @@ namespace Aquariums
         public Fish SellFish(string name)
         {
             Fish requestedFish = this.fish.FirstOrDefault(x => x.Name == name);
-
             if (requestedFish == null)
             {
                 throw new InvalidOperationException($"Fish with the name {name} doesn't exist!");
