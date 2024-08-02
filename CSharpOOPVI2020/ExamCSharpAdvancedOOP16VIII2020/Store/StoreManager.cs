@@ -39,7 +39,6 @@ namespace Store
         public decimal BuyProduct(string name, int quantity)
         {
             Product product = this.products.FirstOrDefault(p => p.Name == name);
-
             if (product == null)
             {
                 throw new ArgumentNullException(nameof(product), NoSuchProductExceptionMessage);
@@ -52,14 +51,13 @@ namespace Store
 
             decimal finalPrice = product.Price * quantity;
             product.Quantity -= quantity;
+            
             return finalPrice;
         }
 
         public Product GetTheMostExpensiveProduct()
         {
-            Product product = this.products
-                .OrderByDescending(p => p.Price)
-                .FirstOrDefault();
+            Product product = this.products.OrderByDescending(p => p.Price).FirstOrDefault();
 
             return product;
         }
