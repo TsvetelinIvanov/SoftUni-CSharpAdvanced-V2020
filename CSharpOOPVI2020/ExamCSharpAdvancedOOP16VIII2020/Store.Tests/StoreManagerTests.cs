@@ -42,6 +42,7 @@ namespace Store.Tests
         public void SetCorrectlyProductQuantity()
         {
             this.product1.Quantity = 4;
+            
             Assert.AreEqual(4, this.product1.Quantity);
         }
 
@@ -98,7 +99,7 @@ namespace Store.Tests
         }
 
         [Test]
-        public void BuyProductThrowsIfNotProduct()
+        public void BuyProductThrowsIfNoProduct()
         {
             this.storeManager.AddProduct(this.product1);
             this.storeManager.AddProduct(this.product2);
