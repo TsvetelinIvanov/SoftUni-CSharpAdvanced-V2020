@@ -26,7 +26,6 @@ namespace OnlineShop.Core
             {
                 string[] data = this.reader.CustomReadLine().Split(Separator);
                 string msg;
-
                 try
                 {
                     msg = this.commandInterpreter.ExecuteCommand(data, this.controller);
