@@ -28,7 +28,6 @@ namespace AquaShop.Core
         public string AddAquarium(string aquariumType, string aquariumName)
         {
             IAquarium aquarium = null;
-
             switch (aquariumType)
             {
                 case nameof(FreshwaterAquarium):
@@ -49,7 +48,6 @@ namespace AquaShop.Core
         public string AddDecoration(string decorationType)
         {
             IDecoration decoration = null;
-
             switch (decorationType)
             {
                 case nameof(Ornament):
@@ -86,7 +84,6 @@ namespace AquaShop.Core
         public string AddFish(string aquariumName, string fishType, string fishName, string fishSpecies, decimal price)
         {
             IFish fish = null;
-
             switch (fishType)
             {
                 case nameof(FreshwaterFish):
