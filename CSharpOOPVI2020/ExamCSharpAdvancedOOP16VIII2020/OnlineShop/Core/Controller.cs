@@ -170,7 +170,7 @@ namespace OnlineShop.Core
         {
             if (!this.computers.ContainsKey(id))
             {
-                throw new ArgumentException(ExceptionMessages.NotExistingComputerId);
+                throw new ArgumentException(ExceptionMessages.NonExistentComputerId);
             }
 
             return this.computers[id];
