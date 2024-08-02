@@ -18,11 +18,11 @@
 
         public const string ExistingPeripheral = "Peripheral {0} already exists in {1} with Id {2}.";
 
-        public const string NotExistingComponent = "Component {0} does not exist in {1} with Id {2}.";
+        public const string NonExistentComponent = "Component {0} does not exist in {1} with Id {2}.";
 
-        public const string NotExistingPeripheral = "Peripheral {0} does not exist in {1} with Id {2}.";
+        public const string NonExistentPeripheral = "Peripheral {0} does not exist in {1} with Id {2}.";
 
-        public const string NotExistingComputerId = "Computer with this id does not exist.";
+        public const string NonExistentComputerId = "Computer with this id does not exist.";
 
         public const string InvalidComputerType = "Computer type is invalid.";
 
