@@ -58,6 +58,7 @@ namespace OnlineShop.Core
             int id = int.Parse(data[0]);
 
             string msg = controller.GetComputerData(id);
+            
             return msg;
         }
 
@@ -94,8 +95,7 @@ namespace OnlineShop.Core
             double overallPerformance = double.Parse(data[6]);
             int generation = int.Parse(data[7]);
 
-            return controller.AddComponent(computerId, id, productType, manufacturer, model, price,
-                overallPerformance, generation);
+            return controller.AddComponent(computerId, id, productType, manufacturer, model, price, overallPerformance, generation);
         }
 
         private string RemovePeripheral(string[] data, IController controller)
