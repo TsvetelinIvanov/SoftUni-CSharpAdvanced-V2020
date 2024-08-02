@@ -30,7 +30,6 @@ namespace SantaWorkshop.Core
         public string AddDwarf(string dwarfType, string dwarfName)
         {
             Dwarf dwarf = null;
-
             switch (dwarfType)
             {
                 case nameof(HappyDwarf):
@@ -53,7 +52,7 @@ namespace SantaWorkshop.Core
             IDwarf dwarf = this.dwarfs.FindByName(dwarfName);
             if (dwarf == null)
             {
-                throw new InvalidOperationException(ExceptionMessages.InexistentDwarf);
+                throw new InvalidOperationException(ExceptionMessages.InexistantDwarf);
             }
 
             Instrument instrument = new Instrument(power);
