@@ -10,6 +10,7 @@ namespace SimpleSnake.Utilities
         [DllImport("kernel32.dll", ExactSpelling = true)]
         private static extern IntPtr GetConsoleWindow();
         private static IntPtr ThisConsole = GetConsoleWindow();
+        
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
         private const int MAXIMIZE = 3;
@@ -18,9 +19,12 @@ namespace SimpleSnake.Utilities
         {
             Console.OutputEncoding = Encoding.Unicode;
             Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
+            
             ShowWindow(ThisConsole, MAXIMIZE);
+            
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
+            
             Console.Clear();
             Console.CursorVisible = false;
         }
