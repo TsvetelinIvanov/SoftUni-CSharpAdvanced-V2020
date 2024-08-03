@@ -12,7 +12,6 @@ namespace Computers
         public Computer(string name)
         {
             this.Name = name;
-
             this.parts = new List<Part>();
         }
 
