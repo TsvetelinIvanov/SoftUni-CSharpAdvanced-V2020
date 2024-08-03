@@ -152,7 +152,7 @@ namespace RobotService.Core
             }
             else
             {
-                throw new ArgumentException(string.Format(ExceptionMessages.InexistingRobot, robotName));
+                throw new ArgumentException(string.Format(ExceptionMessages.InexistantRobot, robotName));
             }
         }        
     }
