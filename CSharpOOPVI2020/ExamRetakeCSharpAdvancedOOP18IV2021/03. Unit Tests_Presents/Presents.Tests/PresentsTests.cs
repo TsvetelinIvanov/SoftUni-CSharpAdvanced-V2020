@@ -89,7 +89,7 @@
         }
 
         [Test]
-        public void RemoveNotRemovesInexisingPresent()
+        public void RemoveNotRemovesInexistantPresent()
         {
             this.bag.Create(this.present1);
             this.bag.Create(this.present2);
@@ -131,7 +131,7 @@
         }
 
         [Test]
-        public void GetPresentNullIfEmptyCollection()
+        public void GetPresentReturnsNullIfEmptyCollection()
         {
             Present present = this.bag.GetPresent(this.present1.Name);
 
@@ -139,7 +139,7 @@
         }
 
         [Test]
-        public void GetPresentNullIfPresentNotExists()
+        public void GetPresentReturnsNullIfPresentNotExists()
         {
             this.bag.Create(this.present1);
             this.bag.Create(this.present2);
