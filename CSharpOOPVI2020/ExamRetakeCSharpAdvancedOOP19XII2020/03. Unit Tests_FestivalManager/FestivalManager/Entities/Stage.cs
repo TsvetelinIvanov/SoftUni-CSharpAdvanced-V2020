@@ -5,11 +5,11 @@
     using System.Linq;
 
     public class Stage
-	{
+    {
         private const string CanNotBeNullMessage = "Can not be null!";
 
         private readonly List<Song> Songs;
-		private readonly List<Performer> performers;
+	private readonly List<Performer> performers;
 
         public Stage()
         {
