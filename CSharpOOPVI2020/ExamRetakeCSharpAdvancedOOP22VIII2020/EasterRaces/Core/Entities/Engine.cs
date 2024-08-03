@@ -25,10 +25,10 @@ namespace EasterRaces.Core.Entities
             {
                 try
                 {
-                    var args = command.Split();
-                    var cmdType = args[0];
+                    string[] args = command.Split();
+                    string cmdType = args[0];
+                    
                     string resultMessage = string.Empty;
-
                     if (cmdType == "CreateDriver")
                     {
                         resultMessage = this.controller.CreateDriver(args[1]);
