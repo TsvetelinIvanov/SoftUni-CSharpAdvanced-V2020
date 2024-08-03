@@ -6,7 +6,7 @@ namespace EasterRaces.Models.Cars.Entities
 {
     public abstract class Car : ICar
     {
-        private const int MinCarModelSimbols = 4;
+        private const int MinCarModelSymbols = 4;
 
         private string model;
         private int horsePower;
@@ -28,9 +28,9 @@ namespace EasterRaces.Models.Cars.Entities
             get { return this.model; }
             private set
             {
-                if (string.IsNullOrWhiteSpace(value) || value.Length < MinCarModelSimbols)
+                if (string.IsNullOrWhiteSpace(value) || value.Length < MinCarModelSymbols)
                 {
-                    throw new ArgumentException(string.Format(ExceptionMessages.InvalidModel, value, MinCarModelSimbols));
+                    throw new ArgumentException(string.Format(ExceptionMessages.InvalidModel, value, MinCarModelSymbols));
                 }
 
                 this.model = value;
