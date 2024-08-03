@@ -8,7 +8,7 @@
 
         public const string InvalidBunnyType = "Invalid bunny type";
 
-        public const string InexistentBunny = "The bunny you want to add an dye to doesn't exist!";
+        public const string InexistantBunny = "The bunny you want to add an dye to doesn't exist!";
 
         public const string BunniesNotReady = "There is no bunny ready to start coloring!";
     }
