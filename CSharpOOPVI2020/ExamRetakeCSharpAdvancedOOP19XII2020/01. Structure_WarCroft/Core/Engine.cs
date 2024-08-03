@@ -50,7 +50,7 @@ namespace WarCroft.Core
             string commandName = commandArgs[0];
             string[] args = commandArgs.Skip(1).ToArray();
 
-            var output = string.Empty;
+            string output = string.Empty;
             switch (commandName)
             {
                 case "JoinParty":
