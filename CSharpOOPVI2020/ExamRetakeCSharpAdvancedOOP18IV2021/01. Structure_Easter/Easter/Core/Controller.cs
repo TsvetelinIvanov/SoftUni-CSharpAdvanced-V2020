@@ -99,6 +99,7 @@ namespace Easter.Core
             if (egg.IsDone())
             {
                 this.coloredEggsCount++;
+                
                 return string.Format(OutputMessages.EggIsDone, egg.Name);
             }
             else
