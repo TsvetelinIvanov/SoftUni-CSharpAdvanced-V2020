@@ -8,7 +8,7 @@ namespace EasterRaces.Models.Races.Entities
 {
     public class Race : IRace
     {
-        private const int MinNameSimbols = 5;
+        private const int MinNameSymbols = 5;
         private const int MinLaps = 1;
 
         private string name;
@@ -27,9 +27,9 @@ namespace EasterRaces.Models.Races.Entities
             get { return this.name; }
             private set
             {
-                if (string.IsNullOrEmpty(value) || value.Length < MinNameSimbols)
+                if (string.IsNullOrEmpty(value) || value.Length < MinNameSymbols)
                 {
-                    throw new ArgumentException(string.Format(ExceptionMessages.InvalidName, value, MinNameSimbols));
+                    throw new ArgumentException(string.Format(ExceptionMessages.InvalidName, value, MinNameSymbols));
                 }
 
                 this.name = value;
