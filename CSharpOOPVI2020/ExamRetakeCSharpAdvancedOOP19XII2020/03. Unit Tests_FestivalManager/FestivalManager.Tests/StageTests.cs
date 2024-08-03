@@ -9,7 +9,7 @@ namespace FestivalManager.Tests
     using System.Linq;
 
     [TestFixture]
-	public class StageTests
+    public class StageTests
     {
         private const string CanNotBeNullExceptionMessage = "Can not be null!";
         private const string YoungPerformerExceptionMessage = "You can only add performers that are at least 18.";
@@ -19,10 +19,10 @@ namespace FestivalManager.Tests
         private const string AddedSongSuccessMessage = "{0} will be performed by {1}";
         private const string PlaySongsSuccessMessage = "{0} performers played {1} songs";
 
-        private readonly Song song1 = new Song("Бурни Нощи1", new TimeSpan(0, 1, 30));
-        private readonly Song song2 = new Song("Бурни Нощи2", new TimeSpan(0, 2, 30));
-        private readonly Song song3 = new Song("Бурни Нощи3", new TimeSpan(0, 3, 30));
-        private readonly Song song4 = new Song("Бурни Нощи4", new TimeSpan(0, 0, 30));
+        private readonly Song song1 = new Song("ГЃГіГ°Г­ГЁ ГЌГ®Г№ГЁ1", new TimeSpan(0, 1, 30));
+        private readonly Song song2 = new Song("ГЃГіГ°Г­ГЁ ГЌГ®Г№ГЁ2", new TimeSpan(0, 2, 30));
+        private readonly Song song3 = new Song("ГЃГіГ°Г­ГЁ ГЌГ®Г№ГЁ3", new TimeSpan(0, 3, 30));
+        private readonly Song song4 = new Song("ГЃГіГ°Г­ГЁ ГЌГ®Г№ГЁ4", new TimeSpan(0, 0, 30));
 
         private Performer performer1;
         private Performer performer2; 
@@ -45,9 +45,9 @@ namespace FestivalManager.Tests
         [Test]
         public void SongInitializeCorrectly()
         {
-            Assert.AreEqual("Бурни Нощи1", this.song1.Name);
+            Assert.AreEqual("ГЃГіГ°Г­ГЁ ГЌГ®Г№ГЁ1", this.song1.Name);
             Assert.AreEqual(new TimeSpan(0, 1, 30).ToString(), this.song1.Duration.ToString());    
-            Assert.AreEqual("Бурни Нощи1 (01:30)", this.song1.ToString());
+            Assert.AreEqual("ГЃГіГ°Г­ГЁ ГЌГ®Г№ГЁ1 (01:30)", this.song1.ToString());
         }
 
         [Test]
