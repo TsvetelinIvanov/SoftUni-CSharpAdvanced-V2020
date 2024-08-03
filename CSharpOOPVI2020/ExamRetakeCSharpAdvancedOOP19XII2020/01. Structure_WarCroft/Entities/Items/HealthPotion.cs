@@ -4,9 +4,9 @@ namespace WarCroft.Entities.Items
 {
     public class HealthPotion : Item
     {
-        private const int DefaltWeight = 5;
+        private const int DefaultWeight = 5;
 
-        public HealthPotion() : base(DefaltWeight)
+        public HealthPotion() : base(DefaultWeight)
         {
 
         }
