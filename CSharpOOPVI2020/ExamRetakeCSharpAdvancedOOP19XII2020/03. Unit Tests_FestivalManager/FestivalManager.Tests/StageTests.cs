@@ -170,7 +170,7 @@ namespace FestivalManager.Tests
         }        
 
         [Test]
-        public void AddSongToPerformerWorksCorectly()
+        public void AddSongToPerformerWorksCorrectly()
         {
             this.stage.AddPerformer(this.performer1);
             this.stage.AddPerformer(this.performer2);
@@ -187,7 +187,7 @@ namespace FestivalManager.Tests
         }
        
         [Test]
-        public void AddSongToPerformerWorksCorectlyForMoreSongs()
+        public void AddSongToPerformerWorksCorrectlyForMoreSongs()
         {
             this.stage.AddPerformer(this.performer1);
             this.stage.AddPerformer(this.performer2);
@@ -202,6 +202,7 @@ namespace FestivalManager.Tests
             string expectedSuccessMessage1_3 = string.Format(AddedSongSuccessMessage, this.song1.ToString(), this.performer3.ToString());
             string expectedSuccessMessage2_3 = string.Format(AddedSongSuccessMessage, this.song2.ToString(), this.performer3.ToString());
             string expectedSuccessMessage3_3 = string.Format(AddedSongSuccessMessage, this.song3.ToString(), this.performer3.ToString());
+            
             string realSuccessMessage1_1 = this.stage.AddSongToPerformer(this.song1.Name, this.performer1.FullName);
             string realSuccessMessage1_2 = this.stage.AddSongToPerformer(this.song1.Name, this.performer2.FullName);
             string realSuccessMessage1_3 = this.stage.AddSongToPerformer(this.song1.Name, this.performer3.FullName);
@@ -234,8 +235,6 @@ namespace FestivalManager.Tests
             this.stage.AddSong(this.song2);
 
             string songSuccessMessage = this.stage.AddSongToPerformer(this.song1.Name, this.performer1.FullName);
-           
-
 
             string expectedSuccessMessage = string.Format(PlaySongsSuccessMessage, 1, 1);
             //string expectedSuccessMessage = "1 performers played 1 songs";
@@ -257,7 +256,6 @@ namespace FestivalManager.Tests
             string song1SuccessMessage = this.stage.AddSongToPerformer(this.song1.Name, this.performer1.FullName);
             string song2SuccessMessage = this.stage.AddSongToPerformer(this.song2.Name, this.performer2.FullName);
 
-
             string expectedSuccessMessage = string.Format(PlaySongsSuccessMessage, 3, 2);
             
             string realSuccessMessage = this.stage.Play();
@@ -268,8 +266,6 @@ namespace FestivalManager.Tests
         [Test]
         public void PlayWorksCorectlyWithMoreSongs()
         {
-            
-
             this.stage.AddPerformer(this.performer1);
             this.stage.AddPerformer(this.performer2);
             this.stage.AddPerformer(this.performer3);
@@ -285,7 +281,6 @@ namespace FestivalManager.Tests
             string song3_1SuccessMessage = this.stage.AddSongToPerformer(this.song3.Name, this.performer1.FullName);
             string song2_2SuccessMessage = this.stage.AddSongToPerformer(this.song2.Name, this.performer2.FullName);
             string song3_3SuccessMessage = this.stage.AddSongToPerformer(this.song3.Name, this.performer3.FullName);
-
 
             string expectedSuccessMessage = string.Format(PlaySongsSuccessMessage, 3, 7);
             
