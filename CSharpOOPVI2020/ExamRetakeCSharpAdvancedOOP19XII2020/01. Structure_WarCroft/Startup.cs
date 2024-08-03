@@ -7,23 +7,23 @@ namespace WarCroft
 {
 	public class StartUp
 	{
-		public static void Main(string[] args)
-		{
-            IReader reader = new ConsoleReader();
-            IWriter writer = new ConsoleWriter();
+	   public static void Main(string[] args)
+	   {
+              IReader reader = new ConsoleReader();
+              IWriter writer = new ConsoleWriter();
 
-            Engine engine = new Engine(reader, writer);
-            engine.Run();
+              Engine engine = new Engine(reader, writer);
+              engine.Run();
 
-                /* Use the below configuration instead of the usual one if you wish to print all output messages together after the inputs for easier comparison with the example output. */
+        /* Use the below configuration instead of the usual one if you wish to print all output messages together after the inputs for easier comparison with the example output. */
 
             //IReader reader = new ConsoleReader();
-            //var sbWriter = new StringBuilderWriter();
+            //IWriter sbWriter = new StringBuilderWriter();
 
-            //var engine = new Engine(reader, sbWriter);
+            //Engine engine = new Engine(reader, sbWriter);
             //engine.Run();
 
             //Console.WriteLine(sbWriter.sb.ToString().Trim());
-        }
+          }
 	}
 }
