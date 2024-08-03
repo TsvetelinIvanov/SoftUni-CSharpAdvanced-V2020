@@ -16,6 +16,6 @@
 
         public const string ExistingRobot = "Robot {0} already exist";
 
-        public const string InexistingRobot = "Robot {0} does not exist";
+        public const string InexistantRobot = "Robot {0} does not exist";
     }
 }
