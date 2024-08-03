@@ -130,7 +130,6 @@ namespace WarCroft.Core
                 throw new ArgumentException(string.Format(ExceptionMessages.CharacterNotInParty, receiverName));
             }
 
-
             if (attacker is IAttacker)
             {
                 (attacker as IAttacker).Attack(receiver);
