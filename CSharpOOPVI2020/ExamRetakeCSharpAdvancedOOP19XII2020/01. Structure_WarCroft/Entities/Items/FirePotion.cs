@@ -4,9 +4,9 @@ namespace WarCroft.Entities.Items
 {
     public class FirePotion : Item
     {
-        private const int DefaltWeight = 5;
+        private const int DefaultWeight = 5;
 
-        public FirePotion() : base(DefaltWeight)
+        public FirePotion() : base(DefaultWeight)
         {
 
         }
