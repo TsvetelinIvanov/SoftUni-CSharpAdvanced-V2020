@@ -88,7 +88,6 @@ namespace EasterRaces.Core.Entities
         public string CreateRace(string name, int laps)
         {
             Race race = new Race(name, laps);
-
             if (this.raceRepository.GetAll().Any(r => r.Name == race.Name && r.Laps == race.Laps))
             {
                 throw new InvalidOperationException(string.Format(ExceptionMessages.RaceExists, race.Name));
