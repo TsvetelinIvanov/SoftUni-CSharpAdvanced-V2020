@@ -30,7 +30,6 @@ namespace Easter.Core
         public string AddBunny(string bunnyType, string bunnyName)
         {
             Bunny bunny = null;
-
             switch (bunnyType)
             {
                 case nameof(HappyBunny):
@@ -48,12 +47,12 @@ namespace Easter.Core
             return string.Format(OutputMessages.BunnyAdded, bunny.GetType().Name, bunny.Name);
         }
 
-        public string AddDyeToBunny(string bunnyfName, int power)
+        public string AddDyeToBunny(string bunnyName, int power)
         {
-            IBunny bunny = this.bunnies.FindByName(bunnyfName);
+            IBunny bunny = this.bunnies.FindByName(bunnyName);
             if (bunny == null)
             {
-                throw new InvalidOperationException(ExceptionMessages.InexistentBunny);
+                throw new InvalidOperationException(ExceptionMessages.InexistantBunny);
             }
 
             Dye dye = new Dye(power);
