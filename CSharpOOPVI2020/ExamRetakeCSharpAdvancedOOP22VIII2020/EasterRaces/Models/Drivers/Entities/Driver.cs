@@ -7,7 +7,7 @@ namespace EasterRaces.Models.Drivers.Entities
 {
     public class Driver : IDriver
     {
-        private const int MinNameSimbols = 5;
+        private const int MinNameSymbols = 5;
 
         private string name;
 
@@ -22,9 +22,9 @@ namespace EasterRaces.Models.Drivers.Entities
             get { return this.name; }
             private set
             {
-                if (string.IsNullOrEmpty(value) || value.Length < MinNameSimbols)
+                if (string.IsNullOrEmpty(value) || value.Length < MinNameSymbols)
                 {
-                    throw new ArgumentException(string.Format(ExceptionMessages.InvalidName, value, MinNameSimbols));
+                    throw new ArgumentException(string.Format(ExceptionMessages.InvalidName, value, MinNameSymbols));
                 }
 
                 this.name = value;
