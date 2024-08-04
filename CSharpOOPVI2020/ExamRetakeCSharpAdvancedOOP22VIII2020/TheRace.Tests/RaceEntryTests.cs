@@ -20,7 +20,6 @@ namespace TheRace.Tests
 
         private RaceEntry raceEntry;
 
-
         [SetUp]
         public void Setup()
         {
