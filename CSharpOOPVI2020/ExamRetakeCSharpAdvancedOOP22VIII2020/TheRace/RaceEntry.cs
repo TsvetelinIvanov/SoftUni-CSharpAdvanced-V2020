@@ -19,8 +19,7 @@ namespace TheRace
             this.driver = new Dictionary<string, UnitDriver>();
         }
 
-        public int Counter
-            => this.driver.Count;
+        public int Counter => this.driver.Count;
 
         public string AddDriver(UnitDriver driver)
         {
@@ -48,10 +47,7 @@ namespace TheRace
                 throw new InvalidOperationException(string.Format(RaceInvalid, MinParticipants));
             }
 
-            double averageHorsePower = this.driver
-                .Values
-                .Select(x => x.Car.HorsePower)
-                .Average();
+            double averageHorsePower = this.driver.Values.Select(d => d.Car.HorsePower).Average();
 
             return averageHorsePower;
         }
