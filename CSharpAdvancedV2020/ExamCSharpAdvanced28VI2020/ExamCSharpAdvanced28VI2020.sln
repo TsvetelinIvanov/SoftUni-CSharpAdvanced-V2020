@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Bombs", "01Problem\01Bombs.csproj", "{AF4ACFAE-8387-4824-AE65-AD8967D83158}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Bombs", "01Bombs\01Bombs.csproj", "{AF4ACFAE-8387-4824-AE65-AD8967D83158}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02Snake", "02Problem\02Snake.csproj", "{564EB63F-87EC-4261-83F8-AF921B7DEE00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02Snake", "02Snake\02Snake.csproj", "{564EB63F-87EC-4261-83F8-AF921B7DEE00}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03Parking", "03Problem\03Parking.csproj", "{CDC09A42-FBC7-44A5-A057-2192AEA70434}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03Parking", "03Parking\03Parking.csproj", "{CDC09A42-FBC7-44A5-A057-2192AEA70434}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
