@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Parking
+namespace _03Parking
 {
     public class Parking
     {
